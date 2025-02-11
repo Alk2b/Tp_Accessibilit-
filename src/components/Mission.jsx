@@ -2,16 +2,10 @@ import contour from '@/assets/images/contour.png';
 
 const Mission = () => {
     return (
-      <section 
-        className="p-5 text-center mb-30" 
-        aria-labelledby="mission-title"
-        role="region"
-      >
-        <div className="flex flex-col items-center gap-8 mt-8"> 
-          <div 
-            className="relative"
-            role="presentation"
-          >
+      <section className="p-5 text-center mb-30"         aria-labelledby="mission-title"
+      role="region">
+        <div className="flex flex-col items-center gap-8 mt-8">
+          <div className="relative" role='presentation'>
             <img 
               className="max-w-[90%] mx-auto h-auto"
               src={contour}
