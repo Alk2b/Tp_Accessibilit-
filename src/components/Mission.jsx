@@ -3,8 +3,8 @@ import contour from '@/assets/images/contour.png';
 const Mission = () => {
     return (
       <section className="relative p-5 text-center">
-        <div className="flex flex-col items-center gap-12 mt-12">
-          <div className="relative">
+        <div className="flex flex-col items-center mt-12">
+          <div className="">
             <img 
               className="max-w-[90%] mx-auto h-auto"
               src={contour}
