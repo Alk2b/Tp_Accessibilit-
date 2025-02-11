@@ -31,9 +31,9 @@ const Navbar = () => {
         </svg>
       </button>
       <ul
-        className={`list-none flex flex-col md:flex-row justify-center items-center gap-4 md:gap-16 md:static bg-white md:bg-transparent w-full md:w-auto transition-all duration-300 ease-in-out ${
-          isOpen ? 'top-12 left-0' : 'top-[-200px] left-0'
-        }`}
+        className={`list-none flex flex-col md:flex-row justify-center items-center gap-4 md:gap-16 absolute md:static bg-white md:bg-transparent w-full md:w-auto transition-all duration-300 ease-in-out ${
+          isOpen ? 'top-16 left-0' : 'top-[-200px] left-0'
+        } md:top-auto md:left-auto`}
       >
         <li>
           <a href="PageAccueil.html" className="font-roboto text-black">
