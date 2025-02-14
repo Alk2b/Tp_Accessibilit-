@@ -9,7 +9,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative flex items-center justify-between w-full">
+    <nav 
+      className="relative flex items-center justify-between w-full"
+      role="navigation"
+      aria-label="Navigation principale"
+    >
       <button
         className="md:hidden text-black focus:outline-none"
         onClick={toggleMenu}
@@ -30,32 +34,31 @@ const Navbar = () => {
           ></path>
         </svg>
       </button>
+      
       <ul
-        className={`list-none flex flex-col md:flex-row justify-center items-center gap-4 md:gap-16 md:static bg-white md:bg-transparent w-full md:w-auto transition-all duration-300 ease-in-out ${
-          isOpen ? 'top-12 left-0' : 'top-[-200px] left-0'
-        }`}
+        className={`list-none flex flex-col md:flex-row justify-center items-center gap-4 md:gap-16 
+          md:static bg-white md:bg-transparent w-full md:w-auto transition-all duration-300 ease-in-out
+          ${isOpen ? 'absolute top-12 left-0 p-4 shadow-lg rounded-lg' : 'hidden md:flex'}`}
+        role="menubar"
       >
-        <li>
-          <a href="PageAccueil.html" className="font-roboto text-black">
-            Accueil
-          </a>
-        </li>
-        <li>
-          <a href="CeQueLonPropose.html" className="font-roboto text-black">
-            Offres
-          </a>
-        </li>
-        <li>
-          <a href="qui sommes nous.html" className="font-roboto text-black">
-            A propos
-          </a>
-        </li>
-        <li>
-          <a href="#" className="font-roboto text-black">
-            Partenaires
-          </a>
-        </li>
+        {[
+          { href: "PageAccueil.html", label: "Accueil" },
+          { href: "CeQueLonPropose.html", label: "Offres" },
+          { href: "qui sommes nous.html", label: "A propos" },
+          { href: "#", label: "Partenaires" }
+        ].map(({ href, label }) => (
+          <li key={label} role="none">
+            <a 
+              href={href} 
+              className="font-roboto text-black hover:text-[#FF6B6B] transition-colors duration-200"
+              role="menuitem"
+            >
+              {label}
+            </a>
+          </li>
+        ))}
       </ul>
+
       <div className="hidden md:flex items-center ml-auto">
         <SearchField
           className="relative"
@@ -63,12 +66,13 @@ const Navbar = () => {
         >
           <input
             type="text"
-            className="border border-gray-300 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="border border-gray-300 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-[#FF6B6B]"
             placeholder="Rechercher..."
           />
           <button
             type="submit"
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none"
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-[#FF6B6B] focus:outline-none"
+            aria-label="Lancer la recherche"
           >
             <svg
               className="w-5 h-5"

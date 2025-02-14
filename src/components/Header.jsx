@@ -3,14 +3,14 @@ import Navbar from './Navbar';
 
 const Header = () => {
   return (
-    <header className="p-5 flex justify-center items-center">
-      <div className="shadow-lg inset-shadow-2xs p-2 rounded-lg">
-        <div className="flex items-center">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white py-4 px-6 shadow-md">
+      <div className="container mx-auto max-w-7xl">
+        <div className="flex items-center justify-between">
           <div className="flex items-center">
             <img
               src={logo}
               alt="Logo Alinia"
-              className="w-[50px] mr-16"
+              className="w-[50px] h-auto"
             />
           </div>
           <Navbar />

@@ -5,69 +5,58 @@ import image17 from "@/assets/images/image17.png";
 const Hero = () => {
   return (
     <section
-      className="min-h-screen px-4 py-16 md:py-24 lg:py-8"
+      className="pt-48 pb-8 px-4 min-h-[90vh]"
       aria-label="Hero section"
     >
       <div className="container mx-auto max-w-7xl">
-        {/* Images Container with Overlay Content */}
-        <div className="mb-16 md:mb-24" role="presentation">
+        <div className="relative mb-8" role="presentation">
           <img
-            className="w-full max-w-4xl mx-auto h-auto object-cover"
+            className="w-full max-w-4xl mx-auto h-auto object-cover rounded-lg "
             src={comp1}
             alt="Équipe de professionnels de santé collaborant dans un environnement médical"
             role="img"
           />
-          <div className="relative text-center">
+          <div className="relative mt-6">
             <img
-              className="w-full max-w-4xl mx-auto h-auto object-cover mt-4 md:mt-6"
+              className="w-full max-w-4xl mx-auto h-auto "
               src={image17}
               alt="Professionnels de santé en interaction avec des patients"
               role="img"
             />
-
-            {/* Overlay Content (Text + Button) */}
             <div
-              className="absolute inset-0 flex flex-col items-center justify-center"
+              className="absolute inset-0 flex flex-col items-center justify-center bg-white/40 backdrop-blur-sm rounded-lg"
               role="complementary"
               aria-label="Message principal"
             >
-              {/* Text Content */}
-              <div className="mx-12">
-                <h1 className="text-2xl md:text-3xl lg:text-4xl font-newsreader text-black p-2 rounded-lg">
+              <div className="mx-auto max-w-4xl px-6 flex flex-col items-center">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-newsreader text-black mb-6 text-center">
                   Alinia, des{" "}
-                  <span className="font-nothing-you-could-do">
+                  <span className="font-nothing-you-could-do text-[#FF6B6B]">
                     professionnel
                   </span>{" "}
                   de la santé, des{" "}
-                  <span className="font-nothing-you-could-do">
+                  <span className="font-nothing-you-could-do text-[#FF6B6B]">
                     facilitateurs
                   </span>
                 </h1>
-
-                <p
-                  className="text-xl md:text-2xl lg:text-3xl font-inter text-black max-w-3xl mx-auto p-2 rounded-lg"
-                  aria-label="Description des bénéficiaires"
-                >
+                <p className="text-xl md:text-2xl font-inter text-black mb-8 text-center">
                   et des{" "}
-                  <span className="font-nothing-you-could-do">
+                  <span className="font-nothing-you-could-do text-[#FF6B6B]">
                     bénéficiaires
                   </span>{" "}
                   de soins de qualité axés sur la croissance organique
                 </p>
+                <Button
+                  onPress={() => (window.location.href = "Inscription.html")}
+                  className="bg-[#FF6B6B] text-white px-8 py-4 rounded-full text-lg 
+                    font-medium shadow-lg hover:bg-[#FF5555] transition-all duration-300
+                    focus:outline-none focus:ring-2 focus:ring-[#FF6B6B] focus:ring-offset-2
+                    transform hover:scale-105 mx-auto"
+                  aria-label="S'inscrire à nos services"
+                >
+                  S&apos;inscrire
+                </Button>
               </div>
-
-              {/* CTA Button */}
-              <Button
-                onPress={() => (window.location.href = "Inscription.html")}
-                className="inline-block bg-[#FF6B6BB5] text-white px-8 py-4 md:px-12 md:py-6 
-                         rounded-full text-lg md:text-xl font-medium shadow-lg 
-                         hover:bg-[#FF6B6B] transition-colors duration-300
-                         focus:outline-none focus:ring-2 focus:ring-[#FF6B6B] focus:ring-offset-2
-                         mt-8 md:mt-10"
-                aria-label="S'inscrire à nos services"
-              >
-                S&apos;inscrire
-              </Button>
             </div>
           </div>
         </div>
