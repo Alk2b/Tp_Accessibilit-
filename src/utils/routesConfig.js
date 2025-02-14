@@ -5,7 +5,7 @@ import AccessibilityDeclaration from "@/pages/AccessibilityDeclaration";
 const routesConfig = [
   { path: "/", name: "Accueil", component: Home },
   { path: "/register", name: "Inscription", component: Register },
-  { path: '/accessibility', name: 'Caca', component: AccessibilityDeclaration},
+  { path: '/accessibility', name: 'Déclaration d\'accessibilité', component: AccessibilityDeclaration},
   // Add more routes here as needed
 ];
 
