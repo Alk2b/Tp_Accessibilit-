@@ -1,16 +1,9 @@
-import logo from '@/assets/images/logo.png';
 import rect6 from '@/assets/images/Rectangle 6.png';
 import rect7 from '@/assets/images/Rectangle 7.png';
 
 const Register = () => {
   return (
     <div className="min-h-screen bg-white font-inter">
-      <header className="py-4 px-6 shadow-sm">
-        <div className="flex items-center gap-2">
-          <img src={logo} alt="Logo de Lénia" className="w-8 h-8" /> {/* Resized */}
-          <h1 className="text-2xl font-newsreader">Lénia</h1>
-        </div>
-      </header>
 
       <main className="container mx-auto max-w-2xl px-4 py-8">
         <div className="relative mb-8">
