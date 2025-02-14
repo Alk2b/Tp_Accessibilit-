@@ -13,13 +13,13 @@ const BreadcrumbsComponent = () => {
   const pathnames = location.pathname.split("/").filter((x) => x);
 
   return (
-    <Breadcrumbs className="flex space-x-2 py-4 px-6">
+    <Breadcrumbs className="flex space-x-4 py-4 px-8 text-2xl">
       <Breadcrumb>
-        <div className="flex items-center space-x-1">
+        <div className="flex items-center space-x-2">
           <Link to="/" className="text-blue-600 hover:underline">
             {routeTranslations["/"]}
           </Link>
-          <ChevronRight className="w-4 h-4 text-gray-500" />
+          <ChevronRight className="w-5 h-5 text-gray-500" />
         </div>
       </Breadcrumb>
       {pathnames.map((value, index) => {
@@ -29,7 +29,7 @@ const BreadcrumbsComponent = () => {
 
         return (
           <Breadcrumb key={to} isCurrent={isLast}>
-            <div className="flex items-center space-x-1">
+            <div className="flex items-center space-x-2">
               {isLast ? (
                 <span className="text-gray-500">{translatedValue}</span>
               ) : (
@@ -37,7 +37,7 @@ const BreadcrumbsComponent = () => {
                   <Link to={to} className="text-blue-600 hover:underline">
                     {translatedValue}
                   </Link>
-                  <ChevronRight className="w-4 h-4 text-gray-500" />
+                  <ChevronRight className="w-5 h-5 text-gray-500" />
                 </>
               )}
             </div>

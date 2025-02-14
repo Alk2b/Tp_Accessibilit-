@@ -10,7 +10,7 @@ const Header = () => {
             <img
               src={logo}
               alt="Logo Alinia"
-              className="w-[50px] h-auto"
+              className="w-[50px] h-auto mr-8"
             />
           </div>
           <Navbar />
