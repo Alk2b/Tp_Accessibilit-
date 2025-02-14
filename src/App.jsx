@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import Register from "./pages/Register";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import BreadcrumbsComponent from "./components/Breadcrumbs";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import BreadcrumbsComponent from "@/components/Breadcrumbs";
+import Sitemap from "@/pages/Sitemap";
+import routesConfig from "@/utils/routesConfig";
 
 function App() {
   return (
@@ -11,8 +11,10 @@ function App() {
       <Header />
       <BreadcrumbsComponent />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/register" element={<Register />} />
+        {routesConfig.map((route) => (
+          <Route key={route.path} path={route.path} element={<route.component />} />
+        ))}
+        <Route path="/sitemap" element={<Sitemap />} />
       </Routes>
       <Footer />
     </Router>
