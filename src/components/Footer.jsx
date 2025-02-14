@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import logo from "@/assets/images/logo.png";
 
 const Footer = () => {
@@ -8,21 +8,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
             <div className="flex items-start gap-4">
-              <img
-                src={logo}
-                alt="Logo Alinia"
-                className="w-12 h-12"
-              />
+              <img src={logo} alt="Logo Alinia" className="w-12 h-12" />
               <div className="space-y-2">
                 <p className="font-inter">
                   © {new Date().getFullYear()} Tous droits réservés
                 </p>
-                <Link to="/mentions-legales" className="font-inter">
-                  Mentions légales
-                </Link>
-                <Link to="/declaration-accessibilite" className="font-inter">
-                  Déclaration d&apos;accessibilité
-                </Link>
               </div>
             </div>
           </div>
@@ -33,11 +23,16 @@ const Footer = () => {
               <div className="space-y-2">
                 {title === "Pages" && (
                   <>
-                    <p className="font-inter">Nos clients</p>
-                    <p className="font-inter">Solutions</p>
-                    <p className="font-inter">Opportunités d&apos;emploi</p>
-                    <p className="font-inter">Ressources</p>
-                    <p className="font-inter">Nouveautés</p>
+                    <Link to="/mentions-legales" className="font-inter">
+                      Mentions légales
+                    </Link>
+                    <br />
+                    <Link
+                      to="/declaration-accessibilite"
+                      className="font-inter"
+                    >
+                      Déclaration d&apos;accessibilité
+                    </Link>
                   </>
                 )}
                 {title === "Contact" && (

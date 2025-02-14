@@ -257,9 +257,9 @@ const Register = () => {
               className="mt-1"
             />
             <label htmlFor="termsAccepted" className="text-sm text-gray-600">
-              J'accepte les{" "}
+              J&apos;accepte les{" "}
               <a href="#" className="text-[#FF6B6B] hover:text-[#FF5555]">
-                conditions générales d'utilisation
+                conditions générales d&apos;utilisation
               </a>{" "}
               <span className="text-red-500" aria-hidden="true">*</span>
             </label>
@@ -273,7 +273,7 @@ const Register = () => {
               disabled:opacity-50 disabled:cursor-not-allowed"
             disabled={success}
           >
-            S'inscrire
+            S&apos;inscrire
           </button>
         </form>
 
