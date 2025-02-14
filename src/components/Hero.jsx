@@ -5,7 +5,7 @@ import image17 from "@/assets/images/image17.png";
 const Hero = () => {
   return (
     <section
-      className="pt-48 pb-8 px-4 min-h-[90vh]"
+      className="pt-38 pb-8 px-4 min-h-[90vh]"
       aria-label="Hero section"
     >
       <div className="container mx-auto max-w-7xl">
