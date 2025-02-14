@@ -97,23 +97,24 @@ const Register = () => {
   return (
     <div className="min-h-screen bg-white font-inter pt-20">
       <main className="container mx-auto max-w-2xl px-4 py-8">
-        <div className="flex items-center justify-between mb-6">
-          <div className="flex items-center gap-4">
-            <button 
-              onClick={() => navigate('/')}
-              className="inline-flex items-center text-gray-600 hover:text-[#FF6B6B] transition-colors"
-            >
-              <span className="mr-2">&lt;</span> Retour
-            </button>
-            <h2 className="text-3xl font-newsreader">Inscription</h2>
-          </div>
-          <img 
-            src={rect6} 
-            alt="" 
-            className="w-32 h-auto" 
-            aria-hidden="true" 
-          />
-        </div>
+  <div className="space-y-4 mb-6">
+    <button 
+      onClick={() => navigate('/')}
+      className="text-3xl font-newsreader text-gray-700 hover:text-[#FF6B6B] transition-colors"
+    >
+      <span className="mr-2" aria-hidden="true">&lt;</span> Retour
+    </button>
+    
+    <div className="flex items-center justify-between">
+      <h2 className="text-3xl font-newsreader text-gray-700">Inscription</h2>
+      <img 
+        src={rect6} 
+        alt="" 
+        className="w-32 h-auto" 
+        aria-hidden="true" 
+      />
+    </div>
+  </div>
 
         {/* Affichage des toasts */}
         {error && (
