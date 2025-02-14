@@ -1,6 +1,6 @@
 import logo from '@/assets/images/logo.png';
-import rect6 from '@/assets/images/Rectangle6.png';
-import rect7 from '@/assets/images/Rectangle7.png';
+import rect6 from '@/assets/images/Rectangle 6.png';
+import rect7 from '@/assets/images/Rectangle 7.png';
 
 const Inscription = () => {
   return (

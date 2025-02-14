@@ -1,18 +1,19 @@
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Mission from './components/Mission';
-import Values from './components/Values';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Register from "./pages/Register";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <Router>
       <Header />
-      <Hero />
-      <Mission />
-      <Values />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 }
 
