@@ -28,7 +28,7 @@ const Footer = () => {
                     </Link>
                     <br />
                     <Link
-                      to="/declaration-accessibilite"
+                      to="/accessibility"
                       className="font-inter"
                     >
                       Déclaration d&apos;accessibilité
