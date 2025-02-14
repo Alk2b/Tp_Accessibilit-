@@ -3,6 +3,31 @@ import { useNavigate } from 'react-router-dom';
 import rect6 from '@/assets/images/Rectangle 6.png';
 import rect7 from '@/assets/images/Rectangle 7.png';
 
+// Composant Toast pour afficher les notifications
+const Toast = ({ message, type, onClose }) => {
+  const bgColor = type === 'success' ? 'bg-green-50 border-green-500' : 'bg-red-50 border-red-500';
+  const textColor = type === 'success' ? 'text-green-700' : 'text-red-700';
+
+  return (
+    <div 
+      className={`${bgColor} border-l-4 p-4 mb-6`}
+      role="alert"
+      aria-live="polite"
+    >
+      <div className="flex justify-between items-center">
+        <p className={textColor}>{message}</p>
+        <button 
+          onClick={onClose}
+          className="text-gray-500 hover:text-gray-700"
+          aria-label="Fermer la notification"
+        >
+          &times;
+        </button>
+      </div>
+    </div>
+  );
+};
+
 const Register = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -90,24 +115,21 @@ const Register = () => {
           />
         </div>
 
+        {/* Affichage des toasts */}
         {error && (
-          <div 
-            className="bg-red-50 border-l-4 border-red-500 p-4 mb-6"
-            role="alert"
-            aria-live="polite"
-          >
-            <p className="text-red-700">{error}</p>
-          </div>
+          <Toast 
+            message={error} 
+            type="error" 
+            onClose={() => setError('')} 
+          />
         )}
 
         {success && (
-          <div 
-            className="bg-green-50 border-l-4 border-green-500 p-4 mb-6"
-            role="alert"
-            aria-live="polite"
-          >
-            <p className="text-green-700">{success}</p>
-          </div>
+          <Toast 
+            message={success} 
+            type="success" 
+            onClose={() => setSuccess('')} 
+          />
         )}
         
         <form onSubmit={handleSubmit} className="space-y-6" noValidate>
