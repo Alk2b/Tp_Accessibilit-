@@ -42,7 +42,7 @@ const Navbar = () => {
         role="menubar"
       >
         {[
-          { href: "PageAccueil.html", label: "Accueil" },
+          { href: "/", label: "Accueil" },
           { href: "CeQueLonPropose.html", label: "Offres" },
           { href: "qui sommes nous.html", label: "A propos" },
           { href: "#", label: "Partenaires" }
