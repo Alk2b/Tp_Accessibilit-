@@ -51,7 +51,7 @@ const Hero = () => {
                   className="bg-[#FF6B6B] text-white px-8 py-4 rounded-full text-lg 
                     font-medium shadow-lg hover:bg-[#FF5555] transition-all duration-300
                     focus:outline-none focus:ring-2 focus:ring-[#FF6B6B] focus:ring-offset-2
-                    transform hover:scale-105 mx-auto"
+                    transform hover:scale-105 mx-auto cursor-pointer"
                   aria-label="S'inscrire à nos services"
                 >
                   S&apos;inscrire
