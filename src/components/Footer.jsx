@@ -33,6 +33,10 @@ const Footer = () => {
                     >
                       Déclaration d&apos;accessibilité
                     </Link>
+                    <br />
+                    <Link to="/sitemap" className="font-inter">
+                      Plan du site
+                    </Link>
                   </>
                 )}
                 {title === "Contact" && (
