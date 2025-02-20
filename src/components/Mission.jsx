@@ -1,32 +1,20 @@
-import contour from '@/assets/images/contour.png';
-
 const Mission = () => {
   return (
     <section 
-      className="py-16 px-4 text-center"
+      className="py-8 md:py-16 px-4 text-center"
       aria-labelledby="mission-title"
       role="region"
     >
       <div className="container mx-auto max-w-7xl">
-        <div className="relative max-w-4xl mx-auto" role="presentation">
-          <img 
-            className="w-full h-auto mx-auto"
-            src={contour}
-            alt="" 
-            aria-hidden="true"
-            role="presentation"
-          />
-          <div 
-            className="absolute inset-0 flex flex-col items-center justify-center px-8"
-            aria-live="polite"
-          >
+        <div className="bg-white rounded-lg p-6 md:p-8 lg:p-12 max-w-4xl mx-auto">
+          <div className="border-4 border-dashed border-gray-600 rounded-lg p-6 md:p-8">
             <h2 
               id="mission-title"
-              className="text-3xl md:text-4xl font-italiana mb-6 text-black"
+              className="text-2xl md:text-3xl lg:text-4xl font-italiana mb-4 md:mb-6 text-black"
             >
               Notre mission
             </h2>
-            <p className="font-inter text-black text-center text-lg md:text-xl leading-7 max-w-3xl">
+            <p className="font-inter text-black text-center text-base md:text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto">
               Bienvenue sur notre{' '}
               <a 
                 href="https://www.adecco.fr/medical/"
