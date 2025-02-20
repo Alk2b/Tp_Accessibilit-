@@ -5,6 +5,10 @@ import routesConfig from "../utils/routesConfig";
 
 const BreadcrumbsComponent = () => {
   const location = useLocation();
+
+  if (location.pathname === "/") {
+    return null;
+  }
   const pathnames = location.pathname.split("/").filter((x) => x);
 
   const getRouteName = (path) => {
