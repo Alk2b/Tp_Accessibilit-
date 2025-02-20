@@ -27,7 +27,18 @@ const Mission = () => {
               Notre mission
             </h2>
             <p className="font-inter text-black text-center text-lg md:text-xl leading-7 max-w-3xl">
-              Bienvenue sur notre plateforme dédiée à la santé, où chaque mission est une opportunité 
+              Bienvenue sur notre{' '}
+              <a 
+                href="https://www.adecco.fr/medical/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#FF6B6B] hover:text-[#FF5555] focus:outline-none focus:ring-2 focus:ring-[#FF6B6B] focus:ring-offset-2 rounded-sm inline-flex items-center"
+                aria-label="Visiter la plateforme Adecco Medical (s'ouvre dans un nouvel onglet)"
+              >
+                plateforme
+                <span className="sr-only"> (s'ouvre dans un nouvel onglet)</span>
+              </a>{' '}
+              dédiée à la santé, où chaque mission est une opportunité 
               de faire une différence dans le domaine médical. Explorez nos possibilités et découvrez 
               comment nous simplifions la recherche et la participation à des missions pour les 
               professionnels de la santé engagés
