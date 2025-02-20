@@ -6,7 +6,6 @@ const Hero = () => {
   return (
     <section
       className="pt-38 pb-8 px-4 min-h-[90vh]"
-      aria-label="Hero section"
     >
       <div className="container mx-auto max-w-7xl">
         <div className="relative mb-8" role="presentation">
@@ -14,19 +13,18 @@ const Hero = () => {
             className="w-full max-w-4xl mx-auto h-auto object-cover rounded-lg "
             src={comp1}
             alt="Équipe de professionnels de santé collaborant dans un environnement médical"
-            role="img"
+            aria-hidden="true"
           />
           <div className="relative mt-6">
             <img
               className="w-full max-w-4xl mx-auto h-auto "
               src={image17}
               alt="Professionnels de santé en interaction avec des patients"
-              role="img"
+              aria-hidden="true"
             />
             <div
               className="absolute inset-0 flex flex-col items-center justify-center bg-white/40 backdrop-blur-sm rounded-lg"
               role="complementary"
-              aria-label="Message principal"
             >
               <div className="mx-auto max-w-4xl px-6 flex flex-col items-center">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-newsreader text-black mb-6 text-center">
