@@ -5,6 +5,13 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <div 
+      role="application"
+      aria-label="Alinia application"
+      lang="fr"
+      tabIndex="-1"
+    >
+      <App />
+    </div>
   </StrictMode>,
 )
