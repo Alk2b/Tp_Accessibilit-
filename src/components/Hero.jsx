@@ -28,7 +28,7 @@ const Hero = () => {
               onPress={() => (window.location.href = "/register")}
               className="mt-6 bg-[#FF6B6B] text-white px-6 py-3 rounded-full text-lg font-medium shadow-md 
               hover:bg-[#FF5555] transition-transform duration-300 focus:outline-none 
-              focus:ring-2 focus:ring-[#FF6B6B] focus:ring-offset-2 hover:scale-105"
+              focus:ring-2 focus:ring-[#FF6B6B] focus:ring-offset-2 hover:scale-105 cursor-pointer"
               aria-label="S'inscrire à nos services"
             >
               S&apos;inscrire
