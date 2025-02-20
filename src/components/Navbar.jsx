@@ -1,9 +1,10 @@
-import { useState } from 'react';
-import { SearchField } from 'react-aria-components';
+import { useState } from "react";
+import { SearchField } from "react-aria-components";
+import { Menu } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState("");
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -13,12 +14,12 @@ const Navbar = () => {
     e.preventDefault();
     if (searchValue.trim()) {
       // Logique de recherche ici
-      console.log('Recherche:', searchValue);
+      console.log("Recherche:", searchValue);
     }
   };
 
   return (
-    <nav 
+    <nav
       className="relative flex items-center justify-between w-full"
       aria-label="Navigation principale"
     >
@@ -30,23 +31,28 @@ const Navbar = () => {
         aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
       >
         <span className="sr-only">Menu</span>
+        <Menu size={24} />
       </button>
-      
+
       <ul
         id="nav-menu"
         className={`list-none flex flex-col md:flex-row justify-center items-center gap-4 md:gap-16 
           md:static bg-white md:bg-transparent w-full md:w-auto transition-all duration-300 ease-in-out
-          ${isOpen ? 'absolute top-12 left-0 p-4 shadow-lg rounded-lg' : 'hidden md:flex'}`}
+          ${
+            isOpen
+              ? "absolute top-12 left-0 p-4 shadow-lg rounded-lg"
+              : "hidden md:flex"
+          }`}
       >
         {[
           { href: "/", label: "Accueil" },
           { href: "CeQueLonPropose.html", label: "Offres" },
           { href: "qui sommes nous.html", label: "A propos" },
-          { href: "#", label: "Partenaires" }
+          { href: "#", label: "Partenaires" },
         ].map(({ href, label }) => (
           <li key={label}>
-            <a 
-              href={href} 
+            <a
+              href={href}
               className="font-roboto text-black hover:text-[#FF6B6B] transition-colors duration-200"
             >
               {label}
@@ -56,15 +62,8 @@ const Navbar = () => {
       </ul>
 
       <div className="hidden md:flex items-center ml-auto">
-        <form 
-          onSubmit={handleSearch}
-          className="relative"
-          role="search"
-        >
-          <SearchField
-            className="relative"
-            aria-label="Rechercher"
-          >
+        <form onSubmit={handleSearch} className="relative" role="search">
+          <SearchField className="relative" aria-label="Rechercher">
             <input
               type="search"
               value={searchValue}
